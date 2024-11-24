@@ -23,4 +23,8 @@ export class MyFirstCompComponent {
     console.log(this.messages)
   }
 
+  deleteMessage(index:number){
+    this.messages.splice(index, 1);
+  }
+
 }
