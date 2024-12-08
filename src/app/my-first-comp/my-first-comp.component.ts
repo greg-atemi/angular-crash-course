@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MyFirstService } from '../services/my-first.service';
 
 @Component({
@@ -30,7 +30,6 @@ export class MyFirstCompComponent {
   }
 
   deleteMessage(index:number){
-    this.messages.splice(index, 1);
+    this.service.deleteMessage(index);
   }
-
 }
